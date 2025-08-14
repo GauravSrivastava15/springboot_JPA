@@ -14,7 +14,8 @@ import java.util.Optional;
 @Repository
 public interface ProductRepository extends JpaRepository<ProductEntity, Long> { // we pass the entity class and the type of the id
 
-    // spring boot on its own write the custom query based on the function name. Function name should be in the proper format for this to work
+    // spring boot on its own write the custom query based on the function name.
+    // Function name should be in the proper format for this to work
     List<ProductEntity> findByTitle(String title);
 
     List<ProductEntity> findByCreatedAtAfter(LocalDate after);
