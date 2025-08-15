@@ -1,6 +1,21 @@
 insert into test.product (price, quantity, sku, title)
 values
-(12.4, 4, 'parle734', 'Parle Buscuit'),
-(14.4, 1, 'pepsi123', "Pepsi"),
-(34.4, 10, 'Coke16', 'Coca Cola'),
-(16.4, 3, 'pepsi156', "Mazza");
+(12.4, 4, 'parle734', 'Parle Biscuit'),
+(14.4, 1, 'pepsi123', 'Pepsi'),
+(34.4, 10, 'coke16', 'Coca Cola'),
+(16.4, 3, 'mazza156', 'Mazza'),
+(22.5, 5, 'kitkat221', 'KitKat'),
+(18.9, 2, 'lays452', 'Lays Chips'),
+(45.0, 7, 'sprite998', 'Sprite'),
+(11.3, 12, 'marie812', 'Marie Gold Biscuit'),
+(27.6, 6, 'fanta765', 'Fanta'),
+(33.9, 4, 'thumbs334', 'Thumbs Up'),
+(8.5, 20, 'maggie777', 'Maggi Noodles'),
+(19.0, 8, 'kurkure888', 'Kurkure Masala Munch'),
+(40.5, 3, 'dairymilk555', 'Dairy Milk Silk'),
+(13.7, 15, 'oreo931', 'Oreo'),
+(25.0, 9, 'bournvita611', 'Bournvita'),
+(30.2, 5, 'redbull210', 'Red Bull'),
+(28.8, 6, 'appfizz901', 'Appy Fizz'),
+(21.6, 10, 'tropicana333', 'Tropicana Juice'),
+(17.4, 8, 'perrier144', 'Perrier Sparkling Water');

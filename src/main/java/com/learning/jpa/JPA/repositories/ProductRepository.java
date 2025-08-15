@@ -1,13 +1,13 @@
 package com.learning.jpa.JPA.repositories;
 
 import com.learning.jpa.JPA.entities.ProductEntity;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,7 +16,15 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long> { 
 
     // spring boot on its own write the custom query based on the function name.
     // Function name should be in the proper format for this to work
-    List<ProductEntity> findByTitle(String title);
+
+    List<ProductEntity> findByOrderByPrice();  // It will give us all the products and sort that on price
+
+    // as of now it is tightly coupled to sort on different parameters we will need to write a new function
+    // so to overcome this we can do something like this
+    List<ProductEntity> findBy(Sort sort);
+
+    List<ProductEntity> findByTitleOrderByPrice(String title);
+
 
     List<ProductEntity> findByCreatedAtAfter(LocalDate after);
 
