@@ -46,7 +46,7 @@ class JpaTutorialApplicationTests {
 
 //		List<ProductEntity> product = productRepository.findByTitleContaining("choco");
 
-		List<ProductEntity> product = productRepository.findByTitleContainingIgnoreCase("CHOco");
+		List<ProductEntity> product = productRepository.findByTitleContainingIgnoreCase("CHOco", null);
 
 		System.out.println(product);
 	}

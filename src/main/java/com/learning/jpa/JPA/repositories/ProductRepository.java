@@ -1,6 +1,7 @@
 package com.learning.jpa.JPA.repositories;
 
 import com.learning.jpa.JPA.entities.ProductEntity;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -23,6 +24,8 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long> { 
     // so to overcome this we can do something like this
     List<ProductEntity> findBy(Sort sort);
 
+    List<ProductEntity> findByTitle(String Title, Pageable pageable);
+
     List<ProductEntity> findByTitleOrderByPrice(String title);
 
 
@@ -36,7 +39,7 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long> { 
 
     List<ProductEntity> findByTitleContaining(String title);
 
-    List<ProductEntity> findByTitleContainingIgnoreCase(String title);
+    List<ProductEntity> findByTitleContainingIgnoreCase(String title, Pageable pageable);
 
 //    Optional<ProductEntity> findByTitleAndPrice(String title, BigDecimal price);
 
